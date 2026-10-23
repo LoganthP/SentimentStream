@@ -26,6 +26,7 @@
 <img src="https://img.shields.io/badge/SQLite-Jobs%20%26%20Search-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Apache%20Parquet-Columnar-50ABF1?style=for-the-badge&logo=apache&logoColor=white"/>
 <br></br>
+
 [Overview](#-overview) •
 [Features](#-features) •
 [Architecture](#%EF%B8%8F-architecture) •
