@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="SentimentStream banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-0.4 0;0.4 0;-0.4 0" dur="8s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .t  { font: 800 64px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: -1px; }
+    .s  { font: 500 21px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #cbd5e1; }
+    .c  { font: 600 14px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #e2e8f0; letter-spacing: 1.5px; }
+    .fade { animation: fade 1.4s ease-out both; }
+    .fade2 { animation: fade 1.4s ease-out 0.4s both; }
+    .fade3 { animation: fade 1.4s ease-out 0.8s both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .dot { animation: rise 6s linear infinite; }
+    @keyframes rise { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateY(-340px); opacity: 0; } }
+  </style>
+
+  <rect width="1200" height="340" rx="22" fill="url(#bg)"/>
+  <circle cx="180" cy="70" r="220" fill="url(#glowA)">
+    <animate attributeName="cx" values="180;260;180" dur="12s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1040" cy="290" r="240" fill="url(#glowB)">
+    <animate attributeName="cx" values="1040;940;1040" dur="14s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- flowing data streams -->
+  <path d="M0 250 C 200 200, 400 300, 600 250 S 1000 200, 1200 250" stroke="url(#wave1)" stroke-width="3" fill="none" stroke-dasharray="14 10">
+    <animate attributeName="stroke-dashoffset" from="0" to="-480" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0 280 C 250 320, 450 230, 650 280 S 1000 330, 1200 270" stroke="url(#wave2)" stroke-width="2" fill="none" stroke-dasharray="6 12">
+    <animate attributeName="stroke-dashoffset" from="0" to="360" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0 220 C 300 260, 500 190, 800 225 S 1100 250, 1200 215" stroke="url(#wave1)" stroke-width="1.5" fill="none" stroke-dasharray="3 9" opacity="0.7">
+    <animate attributeName="stroke-dashoffset" from="0" to="-240" dur="4s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- rising sentiment particles -->
+  <g>
+    <circle class="dot" cx="90"  cy="340" r="3" fill="#4ade80" style="animation-delay:0s"/>
+    <circle class="dot" cx="260" cy="340" r="2.5" fill="#f87171" style="animation-delay:1.2s"/>
+    <circle class="dot" cx="430" cy="340" r="3" fill="#facc15" style="animation-delay:2.4s"/>
+    <circle class="dot" cx="760" cy="340" r="2.5" fill="#4ade80" style="animation-delay:0.6s"/>
+    <circle class="dot" cx="930" cy="340" r="3" fill="#f87171" style="animation-delay:3s"/>
+    <circle class="dot" cx="1110" cy="340" r="2.5" fill="#facc15" style="animation-delay:1.8s"/>
+    <circle class="dot" cx="600" cy="340" r="2" fill="#38bdf8" style="animation-delay:4s"/>
+  </g>
+
+  <!-- glass card -->
+  <rect x="150" y="58" width="900" height="190" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.16"/>
+
+  <g class="fade">
+    <text x="600" y="140" text-anchor="middle" class="t" fill="url(#title)">SentimentStream</text>
+  </g>
+  <g class="fade2">
+    <text x="600" y="180" text-anchor="middle" class="s">Distributed Social Media Sentiment &amp; Emerging Trend Analytics on Apache Spark</text>
+  </g>
+  <g class="fade3">
+    <text x="600" y="222" text-anchor="middle" class="c">PYSPARK  •  MLLIB  •  SPARK SQL  •  HDFS  •  HIVE  •  MAPREDUCE  •  FASTAPI  •  REACT</text>
+  </g>
+</svg>
