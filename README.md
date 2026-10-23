@@ -28,15 +28,6 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/speedup-2.67%C3%97-22c55e?style=flat-square"/>
-<img src="https://img.shields.io/badge/throughput-12.7K%20rows%2Fs-8b5cf6?style=flat-square"/>
-<img src="https://img.shields.io/badge/max%20upload-10%20GB-0ea5e9?style=flat-square"/>
-<img src="https://img.shields.io/badge/tests-pytest%20%7C%20Playwright-f472b6?style=flat-square"/>
-<img src="https://img.shields.io/github/last-commit/LoganthP/SentimentStream?style=flat-square&color=a78bfa"/>
-<img src="https://img.shields.io/github/repo-size/LoganthP/SentimentStream?style=flat-square&color=38bdf8"/>
-
-<br/><br/>
-
 [Overview](#-overview) •
 [Features](#-features) •
 [Architecture](#%EF%B8%8F-architecture) •
