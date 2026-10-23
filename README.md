@@ -10,8 +10,6 @@
 
 **A Distributed Big Data Analytics Framework for Social Media Sentiment Classification and Emerging Trend Detection Using Apache Spark**
 
-<sub>Big Data Analytics course project · BCSBD713</sub>
-
 <br/>
 
 <img src="https://img.shields.io/badge/Apache%20Spark-3.5.3-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
@@ -29,8 +27,6 @@
 <img src="https://img.shields.io/badge/Docker-Compose-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 <img src="https://img.shields.io/badge/SQLite-Jobs%20%26%20Search-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Apache%20Parquet-Columnar-50ABF1?style=for-the-badge&logo=apache&logoColor=white"/>
-
-<br/><br/>
 
 [Overview](#-overview) •
 [Features](#-features) •
