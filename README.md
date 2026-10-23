@@ -642,6 +642,4 @@ The job is shown with an amber **interrupted** badge — click **Retry** to run 
 Normal on startup — it switches to **“Spark ready”** once the session is initialized.
 </details>
 
-<img src="assets/divider.svg" width="100%"/>
-
 <img src="assets/footer.svg" width="100%"/>
