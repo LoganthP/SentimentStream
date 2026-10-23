@@ -1,0 +1,55 @@
+# Default:      docker compose up --build
+#               -> API on :8000, dashboard on :8080, Spark UI on :4040
+# With HDFS:    set SS_STORAGE_URI in .env (see .env.example), then
+#               docker compose --profile hdfs up --build
+#               -> HDFS NameNode UI on :9870
+
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000", "4040:4040"]
+    environment:
+      SPARK_DRIVER_MEMORY: ${SPARK_DRIVER_MEMORY:-3g}
+      SS_STORAGE_URI: ${SS_STORAGE_URI:-}
+    volumes:
+      - ss-data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: http://localhost:8000
+    ports: ["8080:80"]
+    depends_on: [backend]
+
+  namenode:
+    profiles: ["hdfs"]
+    image: bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8
+    container_name: namenode
+    hostname: namenode
+    ports: ["9870:9870", "9000:9000"]
+    environment:
+      CLUSTER_NAME: sentimentstream
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_webhdfs_enabled: "true"
+      HDFS_CONF_dfs_permissions_enabled: "false"
+    volumes:
+      - hdfs-name:/hadoop/dfs/name
+
+  datanode:
+    profiles: ["hdfs"]
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    hostname: datanode
+    environment:
+      SERVICE_PRECONDITION: namenode:9870
+      CORE_CONF_fs_defaultFS: hdfs://namenode:9000
+      HDFS_CONF_dfs_permissions_enabled: "false"
+    volumes:
+      - hdfs-data:/hadoop/dfs/data
+    depends_on: [namenode]
+
+volumes:
+  ss-data:
+  hdfs-name:
+  hdfs-data:
