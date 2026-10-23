@@ -10,8 +10,6 @@
 
 **A Distributed Big Data Analytics Framework for Social Media Sentiment Classification and Emerging Trend Detection Using Apache Spark**
 
-<br/>
-
 <img src="https://img.shields.io/badge/Apache%20Spark-3.5.3-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white"/>
 <img src="https://img.shields.io/badge/PySpark-MLlib-FDEE21?style=for-the-badge&logo=apachespark&logoColor=black"/>
 <img src="https://img.shields.io/badge/Hadoop-HDFS-66CCFF?style=for-the-badge&logo=apachehadoop&logoColor=black"/>
@@ -28,7 +26,16 @@
 <img src="https://img.shields.io/badge/SQLite-Jobs%20%26%20Search-003B57?style=for-the-badge&logo=sqlite&logoColor=white"/>
 <img src="https://img.shields.io/badge/Apache%20Parquet-Columnar-50ABF1?style=for-the-badge&logo=apache&logoColor=white"/>
 
-<br></br>
+<br/><br/>
+
+<img src="https://img.shields.io/badge/speedup-2.67%C3%97-22c55e?style=flat-square"/>
+<img src="https://img.shields.io/badge/throughput-12.7K%20rows%2Fs-8b5cf6?style=flat-square"/>
+<img src="https://img.shields.io/badge/max%20upload-10%20GB-0ea5e9?style=flat-square"/>
+<img src="https://img.shields.io/badge/tests-pytest%20%7C%20Playwright-f472b6?style=flat-square"/>
+<img src="https://img.shields.io/github/last-commit/LoganthP/SentimentStream?style=flat-square&color=a78bfa"/>
+<img src="https://img.shields.io/github/repo-size/LoganthP/SentimentStream?style=flat-square&color=38bdf8"/>
+
+<br/><br/>
 
 [Overview](#-overview) •
 [Features](#-features) •
@@ -406,11 +413,11 @@ The HDFS NameNode UI is then available at http://localhost:9870.
 
 ```mermaid
 flowchart LR
-    subgraph default["docker compose up"]
+    subgraph core["docker compose up"]
         FE["frontend<br/>Nginx :8080"] --> BE["backend<br/>FastAPI :8000 · Spark UI :4040"]
         BE --> V[("ss-data volume")]
     end
-    subgraph hdfs["--profile hdfs"]
+    subgraph hdfsProfile["--profile hdfs (optional)"]
         NN["namenode<br/>:9870 · :9000"] --> DN["datanode"]
     end
     BE -. "SS_STORAGE_URI=hdfs://namenode:9000" .-> NN
