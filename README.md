@@ -32,15 +32,6 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/speedup-2.67%C3%97-22c55e?style=flat-square"/>
-<img src="https://img.shields.io/badge/throughput-12.7K%20rows%2Fs-8b5cf6?style=flat-square"/>
-<img src="https://img.shields.io/badge/max%20upload-10%20GB-0ea5e9?style=flat-square"/>
-<img src="https://img.shields.io/badge/tests-pytest%20%7C%20Playwright-f472b6?style=flat-square"/>
-<img src="https://img.shields.io/github/last-commit/LoganthP/SentimentStream?style=flat-square&color=a78bfa"/>
-<img src="https://img.shields.io/github/repo-size/LoganthP/SentimentStream?style=flat-square&color=38bdf8"/>
-
-<br/><br/>
-
 [Overview](#-overview) •
 [Features](#-features) •
 [Architecture](#%EF%B8%8F-architecture) •
@@ -654,22 +645,5 @@ Normal on startup — it switches to **“Spark ready”** once the session is i
 </details>
 
 <img src="assets/divider.svg" width="100%"/>
-
-## 👤 Author
-
-<div align="center">
-
-**Loganth P**
-B.E. Computer Science & Engineering · Vidyavardhaka College of Engineering, Mysuru
-
-<a href="https://github.com/LoganthP"><img src="https://img.shields.io/badge/GitHub-LoganthP-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/loganth-p-158667280/"><img src="https://img.shields.io/badge/LinkedIn-Loganth%20P-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:loganthp55@gmail.com"><img src="https://img.shields.io/badge/Email-loganthp55%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-
-<br/><br/>
-
-⭐ If SentimentStream helped you, consider giving the repo a star!
-
-</div>
 
 <img src="assets/footer.svg" width="100%"/>
