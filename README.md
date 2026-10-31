@@ -32,7 +32,7 @@
 [Architecture](#%EF%B8%8F-architecture) •
 [Tech Stack](#-tech-stack) •
 [Benchmarks](#-performance-before-vs-after-optimization) •
-[Setup](#-getting-started) •
+[Getting Started](#-getting-started) •
 [Big Data Modules](#-big-data-modules-hdfs--hive--mapreduce--streaming) •
 [API](#-rest-api) •
 [Troubleshooting](#-troubleshooting)
